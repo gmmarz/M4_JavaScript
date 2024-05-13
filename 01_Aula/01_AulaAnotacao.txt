@@ -1,0 +1,84 @@
+----------------------------------------------------------------------------------------------------
+-Atalhos do VSCode
+----------------------------------------------------------------------------------------------------
+ctrl + ou - diminui ou aumenta o zoom da tela do VS
+
+
+
+--------------------------------------------------------------------------------------------------------------
+-JS Aula 1
+-Link dontpad - infinitybh1305
+-------------------------------------------------------------------------------------------------------------
+ECMAScript - é uma especificação de luinguagem de programação que define a sintaxe, a estrutura e ao recursos do
+JavaScript.
+
+Trindate do site
+Html 		- responsável pelo conteúdo
+css  		- responsável pelo estilo
+javaScript	- responsável pela lógica e pela responsividade da página.
+
+-Recomendação - Colocar a tag script no final do body, isso fará com que o site carregue mais rápido, pois o script
+sendo a parte mais pesada do site, no final será carregado no final, carregando o html primeiramente.
+
+Exercicio para simular um algoritimo:
+Façam um algoritimo para fazer um café, considerando que estão no quarto de sua casa
+
+1-Levantar da cama
+2-Caminhar até a porta do quarto
+3-Se a porta estiver fechada:
+      abrir porta
+
+3.1 andar até a cozinha
+4-Pegar a cafeteira
+5-Pegar o pote com pó de café na estante
+6-Pegar o pote de açuacar na estante
+7-Abrir gaveta
+8-Pegar colher
+9-fechar gaveta
+10-Usar colher para colocar 5 colheres de pó na cafeteira
+11-Usar colher para colocar 5 colheres de açucar na jarra de café
+12-pegar jarra de água na estante
+13-encher a jarra de água com água
+14-transferir a água para cafeteira
+15-ligar a cafeteira na tomada
+16-ligar a cafeteira
+17-esperar o sinal informando que o café está pronto.
+18-desligar a cafeteira
+19-pegar a garrafa termica na estante
+20-colocar a garrafa na pia
+21-abrir a garrafa termica
+22-pegar a jarra de café
+23-transferir o café para a garrafa terminca
+24-colocar a jarrade café na pia
+25-fechar a garrafa termina
+26-pegar caneco de tomar café
+27-levar caneco e garrafa termina para a mesa
+28-abrir a garrafa termica
+29-transferir café para o caneco
+30-fechar garrafa termina
+31-tomar o café.
+
+-RESPOSTA DO PROFESSOR
+ENTRADA
+2.Se a porta estiver fechada entao
+ abrir a porta
+3 andar até a cozinha
+4 pegar a cafeteira
+5 pegar o coador
+6 pegar o pó de cafe
+7 pegar obule 
+
+PROCESSAMENTO
+8 encher o bule
+9 fever a agua
+10 colocar o cafe no coador
+11 colocar a cafetreiera abaixo do bule
+12 ferver a agua
+
+SAÌDA
+13 -Pegar o café coado.
+
+-Toda solução de problema pode ser quebrada em três partes. 
+ 1-Entrada de dados.
+ 2-Processamento
+ 3-Saída
