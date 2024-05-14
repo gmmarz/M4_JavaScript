@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          //let num1 = 2
+          //let num2 = 5
+
+          // console.log(num1 + num2) //Soma
+          // console.log(num1 - num2) // subtração
+          // console.log(num1 * num2) // multiplicação
+          // console.log(num1 / num2) // divisão
+          // console.log(num1 ** num2) // exponenciação
+          // console.log(num2 % num1) // modulo
+
+          // ex04 faça um programa que irá capturar dois numeros do usuário e mostre a soma deles na tela
+          //TODA ENTRADA DE USUÁRIO VEM COMO STRING
+
+          //Casting - converter tipos de dados.
+
+          // let num1 = parseFloat(prompt('Digite o primeiro numero:'))
+          // let num2 = parseFloat (prompt('Digite o segunto numero: '))
+
+         
+          // let soma = num1 + num2
+
+          // alert('A soma é ' + soma) //Como o javascript é uma linguagem fracamente tipada, ela consegue concatenar a string com o numero.
+
+
+          //ex5 - faca um programa que peca o nome do usuario, e mostre uma mensagem de boas vindas para ele: "olá {{usuário}}, seja bem vindo"
+          // let nome = prompt('Digite seu nome: ')
+          // alert('Ola'  + nome +  'seja bem vindo')
+
+          //ex06 - faça um programa que peça 3 notas  e mádia aritimetica
+
+          let nota1 = parseFloat(prompt('Digite a primeira nota:'))
+          let nota2 = parseFloat(prompt('Digite a segunda nota: '))
+          let nota3 = parseFloat(prompt('Digite a terceira nota: '))
+
+          let media = (nota1 + nota2 + nota3)/3
+
+          //Saida
+          alert('As notas foram: \nnota 1: ' + nota1 + '\nnota 2: ' + nota2 + '\nnota 3: '+ nota3 + '\nCom a media: ' + media)
+
+          //Template string - similar ao f string do pyton
+          alert(`Suas notas foram: \nnota1: ${nota1}\nnota2: ${nota2}\nnota3: ${nota3}\nMedia: ${media}`)
+
+          
+          //ex7 - faca um programa que peca o peso e a altura de uma pessoa, depois  mostre seu imc na tela
+          // let peso = parseFloat(prompt('Digite seu peso: '))
+          // let altura = parseFloat(prompt('Digite sua altura: '))
+
+          // let imc = peso/(altura**2)
+
+          // alert('Seu IMC é: ' + imc)
+
+
+
+
+     </script>
+</body>
+</html>

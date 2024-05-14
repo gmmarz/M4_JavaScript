@@ -2,6 +2,7 @@
 -Atalhos do VSCode
 ----------------------------------------------------------------------------------------------------
 ctrl + ou - diminui ou aumenta o zoom da tela do VS
+aplicativos - mobile utiliza cozi
 
 
 
@@ -82,3 +83,27 @@ SAÌDA
  1-Entrada de dados.
  2-Processamento
  3-Saída
+
+
+
+-TODA ENTRADA DE USUÁRIO SERÁ DO TIPO STRING
+
+Casting - é o nome que se dá para conversão de variáveis.
+três formar para converter para numero em javascript
+parseInt
+parseFloat
+Number
+
+Pensamento Computacional
+
+1-Decomposição
+2-Rec de padrões
+3-Abstração
+4-Algoritimos
+
+
+Para treinar em casa as logicas
+python brasil
+utilizar a inteligencia artificial phind.com
+
+
