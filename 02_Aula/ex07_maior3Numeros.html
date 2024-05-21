@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>07 Exercícios  de Javascript</h1>
+    <label for="entrada">Digite o primeiro numero:</label>
+    <input type="number" name="entrada" id="entrada">
+    <label for="entrada2">Digite o segundo numero</label>
+    <input type="number" name="entrada2" id="entrada2">
+    <label for="entrada3">Digite o terceorp numero</label>
+    <input type="number" name="entrada3" id="entrada3">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        // Exercício 1: Escreva um programa que recebe dois números como entrada e imprime o maior deles.
+        function action() {
+
+            let num = parseFloat(document.getElementById('entrada').value)      // Captura o valor do input quando o botão é clicado
+            let num2 = parseFloat(document.getElementById('entrada2').value)
+            let num3 = parseFloat(document.getElementById('entrada3').value)
+            let result = ''
+            if(num == num2 && num == num3 ){
+                result = 'Todos os números são iguais'
+            }
+            else{
+                if(num > num2){
+                    if(num > num3){
+                        result = `O número ${num} é o maior dos números`
+                    }
+                    else{
+                        result = `O número ${num3} é o maior dos números`
+                    }
+                }else{
+                    if(num2 > num3){
+                        result = `O número ${num2} é o maior dos números`
+                    }
+                    else{
+                        result = `O número ${num3} é o maior dos números`
+                    }
+                }
+                
+            }
+            document.getElementById('resultado').innerText= result   // Altera o elemento HTML com id correspondente adicionando o texto    
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>

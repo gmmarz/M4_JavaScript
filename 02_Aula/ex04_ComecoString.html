@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="entrada">Digite uma frase</label>
+    <input type="text" name="entrada" id="entrada">
+    <label for="entrada2">Digite e letra de começo que deseja validar</label>
+    <input type="text" name="entrada2" id="entrada2">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        // Exercício 4: Crie um programa que recebe uma string como entrada e verifica se ela começa com a letra escolhida. Imprima "Começa com" a letra que você escolheu, se for verdadeiro, caso contrário, imprima "Não começa com..".
+        function action() {
+
+            let frase = document.getElementById('entrada').value      // Captura o valor do input quando o botão é clicado
+            let letra = document.getElementById('entrada2').value
+            let resut = ''
+            //alternativa frase[0]
+            //frase.charAt(0)
+            if( frase[0].lower() === letra  ){
+                resut = `Sua frase começa com a letra: ${letra}`
+            }
+            else{
+                resut = `Sua frase não começa com a letra: ${letra}`
+            }
+            document.getElementById('resultado').innerText= resut   // Altera o elemento HTML com id correspondente adicionando o texto    
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>

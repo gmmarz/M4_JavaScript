@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------
+-Atalhos do VSCode
+----------------------------------------------------------------------------------------------------
+ctrl + ou - diminui ou aumenta o zoom da tela do VS
+aplicativos - mobile utiliza cozi
+
+
+
+--------------------------------------------------------------------------------------------------------------
+-JS Aula 2
+-Link dontpad - infinitybh2005
+-------------------------------------------------------------------------------------------------------------
+
+DOM - document object mapped
+
+Dica - Para executar o java script no vs code é possível instalar a extensão code runner.
+     -  ou abrir o terminal na pasta do arquivo e digitar
+        node nomearquivo.js
+
+
+Exemplos de comparação no arquivo comparacao.js
+
