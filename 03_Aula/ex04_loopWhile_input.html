@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Contador</title>
+</head>
+<body>
+     
+     <script>
+        // Ex04. Faça um programa que peça um numero para o usuário e mostre uma contagem de
+        //  0 até esse numero. (o numero deve estar incluso)  
+        let maxCnt = Number(prompt('Digite um número: '))
+        let contador = 0;
+
+     // NaN (Not a Number)
+        if (!isNaN(maxCnt)){
+          document.writeln("Você digitou o número: " + maxCnt)
+          document.writeln('<br>')
+          while(contador <= maxCnt ){
+               console.log(contador)
+               document.writeln(contador)
+               // document.writeln('<br>')
+
+               contador++
+          } 
+        }
+        else{
+          document.writeln("Valor digitado não é um número.")
+        }
+ 
+
+     </script>
+</body>
+</html>

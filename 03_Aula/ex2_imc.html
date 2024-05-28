@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculo IMC</title>
+</head>
+<body>
+     
+     <script>
+     // Ex02.
+     // Faça um programa que peça o peso e a altura do usuário.
+     // Calcule seu IMC e mostre qual é sua categoria segundo a tabela IMC
+     // - Abaixo de 18.5 -> Abaixo do Peso
+     // - Entre 18.5 e 25 -> Peso Ideal
+     // - Entre 25 e 30 -> Acima do Peso
+     // - Entre 30 e 35 -> Obesidade I
+     // - Entre 35 e 40 -> Obesidade II
+     // - Acima de 40 -> Obesidade III
+
+     let altura =Number(prompt("Digite sua altura: "))
+     let peso = Number(prompt('Digite sua peso:')) // Casting
+
+     let imc = peso/(altura ** 2)
+     let result;
+
+          
+     if (imc < 18.5 ){
+          result = "Abaixo do peso"
+     }
+     else if (imc < 25){
+          result = "Peso ideal"
+     }
+     else if (imc < 30){
+          result = "Acima peso"
+     }
+     else if (imc < 35){
+          result = "Obesidade I"
+     }
+     else if (imc < 40){
+          result = "Obesidade II"
+     }
+     else {
+          result = "Obesidade III"
+     }
+     
+     console.log(`Seu IMC é ${imc.toFixed(2)} e vc é considadero: ${result}`)
+
+     </script>
+
+
+</body>
+</html>
