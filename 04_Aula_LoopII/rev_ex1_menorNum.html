@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <script>
+          // Ex2 - pegar vários números e mostrar o menor digitado
+          let num  
+          //Acumuladora
+          let menorNum;
+          
+          while(num != 999){
+               let num = Number(prompt('Digite um número(digite 999 para terminar o programa): '))
+               
+               if(( menorNum == undefined || num <= menorNum) && num != 999){
+                    menorNum = num
+               }
+          }
+
+          alert(`O Menor numero digitado foi: ${menorNum}`)
+
+
+     </script>
+</body>
+</html>

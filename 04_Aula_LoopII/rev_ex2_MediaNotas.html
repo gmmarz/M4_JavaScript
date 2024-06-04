@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <script>
+          // Ex2 - pegar vários números e mostrar o menor digitado
+          let qtdNotas = 4
+          let contador = 0
+          
+          //Acumuladora
+          let media = 0
+          let soma = 0
+          //QUando o while 
+          while(contador < qtdNotas ){
+               let nota = Number(prompt(`Digite o ${contador+1}º nota: `))
+               soma+=nota
+               contador++
+          }
+          media = soma/qtdNotas
+
+          alert(`A média das notas foi: ${media}`)
+
+
+     </script>
+</body>
+</html>

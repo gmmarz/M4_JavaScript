@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <script>
+          //Faça um programa que peça uma quantidade indeterminada de números , mas para quando um número negativo for inserido.
+
+          let numero = 1 // variavel de controle
+          //Variáveis acumuladoras
+
+          let soma = 0 // variável auxiliar
+          let qtdNum = 0
+
+          while(numero >=0 ){
+               numero = Number(prompt('Digite um número(Insira valor negativo para parar): '))
+               document.writeln(numero)
+
+               if(numero >=0 ){
+                    soma += numero
+                    qtdNum ++ // Incrementando mais 1
+               }
+
+               
+
+          }
+
+          alert(`A soma dos numeros digitados é ${soma} `)
+          alert(`Foram digitados um total de ${qtdNum}`)
+
+     </script>
+</body>
+</html>

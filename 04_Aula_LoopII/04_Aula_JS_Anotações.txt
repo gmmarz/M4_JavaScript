@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------------------------------
+-Atalhos do VSCode
+----------------------------------------------------------------------------------------------------
+ctrl + ou - diminui ou aumenta o zoom da tela do VS
+aplicativos - mobile utiliza cozi
+
+
+---------------------------------------------------------------------------------------------------------------
+-AULA 4 - Loops II
+---------------------------------------------------------------------------------------------------------------
+Dont pad link: infinitybh0306
+
+
+----
+Rev exercicios
+
+ex01 - Faça um programa que peçla uma quantidade indeterminada de numeros, pare de pedir quando
+o usuário digitar "999" ao final mostre o menor número inserido.
+
+ex02 Faça um programa que peça 4 notas e ao final calcule a média entre as notas.
+utilize a estrutura while
+dica - será que preciso armazenar as notas
+
+ex-desafio - Faça um programa que peça um numero para o usuário e mostre se o numero é primo.
+

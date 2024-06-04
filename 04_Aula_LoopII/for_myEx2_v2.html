@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tabuada numero</title>
+</head>
+<body>
+
+     <h1>Mostrando a tabuado de um número</h1>
+     <label for="entrada">Digite um número: </label>
+     <input type="number" name="entrada" id="entrada" required>
+     <p id="resultado"></p>
+     <button onclick="action()">Clique aqui para executar</button>
+
+     <script>
+          function action(){
+               let num = Number(document.getElementById('entrada').value) // get valeu from input
+
+               let result = ''
+
+               for(let i = 1; i <= 10; i++){
+                    result = `\n${i} * ${num} = ${}`
+               }
+
+          }
+          num1 = Number(prompt('Digite um número: '))
+          for(i=1;i<=10;i++){
+               console.log(`${i} * ${num1} = ${i*num1} ` )
+          }
+     </script>
+</body>
+
+</html>

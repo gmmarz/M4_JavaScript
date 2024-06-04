@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <script>
+          // Ex2 - pegar vários números e mostrar o menor digitado
+          let num = Number(prompt('Digite um número: '));
+          let flg1 = false, flg2 = false;
+
+                    
+          if (num > 1){
+               for(let i = 1; i <=num ; i++){
+
+                    if(i == 1 && num%1==0){
+                         flg1 = true;
+                    }
+                    else if(i == 1 && num%1!=0){
+                         flg1 = false;
+                         break;
+                    }
+                    else if(i > 1 && i != num && num%i == 0)
+                    {
+                         flg2 = false;
+                         break;
+                    }
+                    else{
+                         flg2 = true;
+                    }
+               }
+          }
+          else{
+               alert('Não é um número primo')
+          }
+          
+
+     </script>
+</body>
+</html>
