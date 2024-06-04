@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Vogais Frase</title>
+</head>
+<body>
+     
+
+     <script>
+          let frase = prompt('Digite uma frase: ')
+
+          let qtdVogais = 0;
+
+          for(let letra of frase){
+               
+               if(['a','e','i','o','u'].includes(letra)){
+                    qtdVogais++
+               }
+          }
+
+          document.writeln(`A quantidade de vogais na frase digitada foi: ${qtdVogais}`)
+
+     </script>
+</body>
+</html>

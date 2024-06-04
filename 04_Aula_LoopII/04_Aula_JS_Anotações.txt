@@ -22,4 +22,20 @@ utilize a estrutura while
 dica - será que preciso armazenar as notas
 
 ex-desafio - Faça um programa que peça um numero para o usuário e mostre se o numero é primo.
+utilizando o while.
 
+----
+Exercicios de FOR
+-
+
+ex03 - Faça um programa que peça um numero e faça uma contagem de 1 até o número digitado(ele incluso e utilizando o FOR)
+
+ex 4 - Faça um programa que mostre todos os números pares de 1 a 50
+
+ex5 - Faça um programa que peça um número para o usuário e mostra a tabuada desse número na tela.
+
+ex6 - Faça um programa que peça uma fase para o usuário e mostre quantas vogais tem nessa frase
+
+ex-desafio - Faça um programa que mostre os 1- primeiros numeros de fibonacci.
+   -A sequencia de fibonacci é uma sequencia que começa com "0" e "1" e os próximos valores sempre é a soma dos dois anteriores
+   - exemplo 0 1 1 2 3 5 8 13 21 34
