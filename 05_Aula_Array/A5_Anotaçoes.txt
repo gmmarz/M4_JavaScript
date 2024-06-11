@@ -1,0 +1,209 @@
+Material: https://drive.google.com/file/d/1veB-gsMYle4nIfZ0Q6tYyNv6wdzx3P10/view?usp=drive_link
+TOKEN 2281
+====================================================================================
+Exercicios de Revisão.
+
+
+Ex01 Faça um programa que peça uma frase para o usuário e mostre quantas vogais tem nessa frase.
+
+let frase = prompt('Digite uma frase para contar as vogais')
+
+let qtdVogais = 0
+
+for (let letra of frase) {
+    letra = letra.toLowerCase()
+    if (letra == 'a' || letra == 'o' || letra == 'i' || letra == 'e' || letra == 'u') {
+        qtdVogais++
+    }
+
+    // let vogais = ['a', 'e', 'i', 'o', 'u']
+    // if (vogais.includes(letra.toLowerCase())) {
+    //     qtdVogais++
+    // }
+} 
+
+document.writeln(`Frase Digitada: "${frase}"`)
+document.writeln('<br>')
+document.writeln(`Quantidade de Vogais: ${qtdVogais}`)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Ex02. Faça um programa que peça a idade de 5 pessoas e mostre na tela:
+- a idade da pessoa mais velha
+- a idade da pessoa mais nova
+
+
+let maiorIdade, menorIdade; // Quando as variaveis são declaradas sem valor inicial, elas são "undefined"
+
+for (let i = 0; i < 5; i++) {
+    let idade = prompt('Digite uma idade: ')
+
+    // Verificando se a nova idade coletada é maior que a maior idade armazenada
+    if (idade > maiorIdade || maiorIdade == undefined) {
+        maiorIdade = idade
+    }
+
+    // Verificando se a nova idade coletada é maior que a maior idade armazenada
+    if (idade < menorIdade || menorIdade == undefined) {
+        menorIdade = idade
+    }
+}
+
+document.writeln(`A maior idade inserida é: ${maiorIdade}`)
+document.writeln('<br>')
+document.writeln(`A menor idade inserida é: ${menorIdade}`)
+
+Ex03 Faça um programa que peça um numero, e informe para o usuário se o numero é primo ou não.
+
+
+=========================================================================================
+Exercicios
+
+Ex01 - Faça um programa que peça 4 nomes e armazene-os em um array
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+</head>
+<body>
+    <h1> Nomes </h1>
+    <!-- <ul>
+        <li> Marco </li>
+        <li> Janaina</li>
+        <li> William</li>
+        <li> Wilson</li>
+    </ul> -->
+    
+    
+    
+    
+    <script>
+        // Ex01 - Faça um programa que peça 4 nomes e armazene-os em um array
+        let nomes = []
+
+        for (let i = 0; i < 4; i++) {
+            let nome = prompt(`Digite o ${i + 1}º nome: `)
+            nomes.push(nome)
+        }
+
+        console.log(nomes)
+        document.writeln('<ul>')
+
+        for (let nome of nomes) {
+            document.writeln(`<li> ${nome} </li>`)
+        }
+
+        document.writeln('</ul>')
+    </script>
+</body>
+</html>
+
+Ex02 - Faça um programa que peça 5 numeros, e armazene-os em um array
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ex02 </title>
+</head>
+<body>
+    <script>
+        // Ex02 - Faça um programa que peça 5 numeros, e armazene-os em um array
+        let numeros = []
+        for (let i = 0; i < 5; i++) {
+            let numero = Number(prompt('Digite um numero'))
+            numeros.push(numero)
+        }
+
+        document.writeln("Os numeros digitados foram: ")
+        for (let numero of numeros) {
+            document.writeln(numero)
+        }
+    </script>
+</body>
+</html>
+
+Ex03 - Faça um programa que peça 8 numeros, e armazene os numeros em dois arrays: "impares" e "pares", no primeiro você irá armazenar os numeros impares digitados, no segundo os numeros pares digitados.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ex03 - Faça um programa que peça 8 numeros, e armazene os numeros em dois arrays: "impares" e "pares", no primeiro você irá armazenar os numeros impares digitados, no segundo os numeros pares digitados.
+        
+        // Entrada
+        let numeros = []
+        
+        for (let i = 0; i < 8; i++) {
+            let numero = Number(prompt('Digite um numero: '))
+            numeros.push(numero)
+        }
+        
+        // Processamento
+        let pares = []
+        let impares = []
+        for (let numero of numeros) {
+            if (numero % 2 == 0) {
+                pares.push(numero)
+            } else {
+                impares.push(numero)
+            }
+        }
+
+        // Saída
+        document.writeln(`Os numeros pares digitados foram: ${pares}`)
+        document.writeln('<br>')
+        document.writeln(`Os numeros impares digitados foram: ${impares}`)
+    </script>
+</body>
+</html>
+
+Ex04 - Faça um Programa que peça o nome e 3 notas de um aluno, e ao final mostre o nome do aluno, suas notas e sua média.
+
+===================================================================================================
+Arrays
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arrays </title>
+</head>
+<body>
+    <script>
+        // Criando um array
+        // let array1 = [12, "Lidia", false, null]
+
+        // Acessando valores de um array.
+        // console.log(array1[1])
+        // console.log(array1[3])
+
+        // Quando uma posição inexistente
+        // console.log(array1[4])
+
+        // Adicionar 3 nomes de alunos
+        let alunos = []
+
+        console.log(alunos)
+        for (let i = 0; i < 3; i++) {
+            let nome = prompt('Digite um nome: ')
+            alunos.push(nome)
+        }
+        console.log(alunos)
+
+    </script>
+</body>
+</html>d
