@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <script>
+        let nomes = ['lidia','cristian','silvia']
+        document.writeln(nomes[0])
+        document.writeln(nomes[2])
+        console.log([nomes])
+        nomes.push('Nayson') //Adiciona um elemento ao final do array
+        console.log(nomes)
+        nomes.unshift('Wilson') //Adiciona um elemento ao inicio do array
+        
+        //Remover elementos
+        //remove o ultimo elemento do array
+        nomes.pop()
+        console.log(nomes)
+
+        //Comando para remover um determinado número de posições apartir de um index
+        nomes.slice(1,2) //Remove a partir do elemento 1 dois elementos o 1 e o 2.
+        //Como terceiro argumento pode se passar um nome ou um valor para entrar no lugar removido.
+        console.log(nomes)
+
+        //Para fatiar o array(pegar um pedaço do array )
+        //slice
+        console.log(nomes.slice(2)) // todo munda da posição 2 até o final do array
+        //Abaixo ele irá buscar os elementos na posição 1 e 2
+        console.log(nomes.slice(0,2)) //Irá pegar o primeiro e até a posição 2 excluindo a posição 2. 
+
+    </script>
+</body>
+</html>

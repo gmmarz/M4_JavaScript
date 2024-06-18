@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Execericio-01</title>
+
+</head>
+<body>
+    
+    <h1>Produto de dois numeros</h1>
+    <label for="num1">Digite o primeiro numero:</label>
+    <input type="number" name="num1" id="num1">
+    <label for="num2">Digite o segundo numero:</label>
+    <input type="number" name="num2" id="num2">
+    <p id="result"></p>
+    <button onclick="action()">Clique para executar a função</button>
+
+
+    <script>
+        function produto(num1,num2){
+            result = num1*num2
+            return result
+        }
+
+        function action(){
+            let num1 = Number(document.getElementById('num1').value)
+            let num2 = Number(document.getElementById('num2').value)
+
+            result = produto(num1,num2)
+
+            document.getElementById('result').innerText = result
+        }
+    </script>
+</body>
+</html>

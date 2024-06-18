@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Função</title>
+
+</head>
+<body>
+    
+    <script>
+        //Momento de DEFINIÇÂO da função
+        //parametros, corpo da função e o retorno da função
+        //Nesta função vc é obrigado a passar os valores de a e b, mas o valor de c é opcional assumindo o valor zero quando não passado.
+        function somar(a, b, c = 0){
+            return a + b + c
+        }
+
+        // //exemplo 1
+        // document.writeln(somar(2,5))
+
+        // //exemplo2
+        // let resultado = somar(4,6)
+        // document.writeln(resultado)
+
+        // //exemplo3
+        let num1 = Number(prompt('Digite um numero:'))
+        let num2 = Number(prompt('Digite outro numero:'))
+        document.writeln(somar(num1,num2))
+
+    </script>
+</body>
+</html>

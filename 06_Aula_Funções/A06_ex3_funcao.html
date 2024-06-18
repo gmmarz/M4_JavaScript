@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./06_Aula_Funções/style.css">
+
+    <title>Execericio-03</title>
+
+</head>
+<body>
+    <script>
+        function somarValores(numeros){
+            
+            let soma = 0
+            for(num of numeros){
+                soma = soma + num 
+            }
+
+            return soma
+        }
+
+        let numeros =[]
+        
+        for (let i= 0;i<3;i++){
+            numeros.push(Number(prompt(`Digite o ${i+1}º numero:`)))
+
+        }
+
+        let soma = somarValores(numeros)
+
+        document.writeln(`A soma dos números digitados é ${soma}`)
+
+    </script>
+</body>
+</html>
