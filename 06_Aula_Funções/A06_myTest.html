@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Execericio_myTest</title>
     
@@ -10,14 +11,16 @@
 <body>
 
     <h1>Test aquisiçao</h1>
-    <label for="num">Digite um número:</label>
+    <label for="num">Digite um número:</label> <br>
     <input type="number" name="num" id="num">
-    <button onclick="adicionarNum">Clique para adicionar</button>
+    <button onclick="handlePegarNumero()">Clique para adicionar</button>
+    <button onclick="handleCalcularMedia()"></button>
     <h2>Resultado</h2>
     <p id="result"></p>
 
+   
     <script>
-        function calcularMedia(numeros){
+        function handleCalcularMedia(numeros){
             
             let soma = 0
             let media = 0
@@ -29,17 +32,6 @@
 
             return media
         }
-
-        let numeros =[]
-        
-        for (let i= 0;i<3;i++){
-            numeros.push(Number(prompt(`Digite o ${i+1}º numero:`)))
-
-        }
-
-        let media = calcularMedia(numeros)
-
-        document.writeln(`A média dos números digitados é ${media}`)
 
     </script>
 </body>

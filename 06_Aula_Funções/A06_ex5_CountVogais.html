@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Ex5-Contar vogais</title>
+
+</head>
+<body>
+    
+    <h1>Contar vogais</h1>
+    <label for="texto">Digite um texto:</label><br>
+    <input type="text" id="texto">
+    <p>Resultado:</p>
+    <p id="result"></p>
+    <button onclick="handleOnClick()">Para verificar vogais</button>
+
+    <script>
+
+        function contarVogais(texto){
+            console.log('Executando contarVogais')
+            let vogais = ['a','e','i','o','u']
+            let qteVogais = 0
+
+            for(let letra in texto){
+                if(['a','e','i','o','u'].includes(letra)){
+                    console.log(letra)
+                    qteVogais++
+                }
+            }
+
+            return qteVogais
+
+        }
+
+        function handleOnClick(){
+
+            let texto = document.getElementById('texto').value
+            
+            let qteVogais = 0
+
+            qteVogais = contarVogais(texto)
+            
+            result = `No texto digitado: "${texto}" existem ${qteVogais} vogais"`
+
+            //pegando o elemento paragrado com id result e coloca no texto dele o valor da vairável result.
+            document.getElementById('result').innerText = result
+            
+        }
+    </script>
+</body>
+</html>

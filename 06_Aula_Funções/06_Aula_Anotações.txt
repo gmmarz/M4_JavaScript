@@ -6,3 +6,29 @@
  - Os metodos mais utilizados são o 
    push 
    slice
+
+-Funções
+ -Uma boa pratica é colocar os nomes de uma função como um verbo no imperativo.
+  (somar, listar, calcular)
+
+-Exercicios
+
+01 Faça uma função que recebe 2 numeros e retone o produto entre os dois numeros
+
+02 Faca uma função chamada "calcularMedia" que receba 3 notas e reotorne a media entre as notes
+
+03 faça uma função chamada "somarValores " que recebe um array de numeros e retona a soma de todos os valores do array
+
+04 faca uma funcao chamada"verificarPar" que recebe um numero e retorna um boolenano: true se o numero for par, ou false se o numero for impar
+
+05 faca um programa que peca uma palavra para o usuário, e informe a quantidade de vogias que existem na palacra( faca uma função chamada contarVogais)
+
+06 faça um programa que peça no html o peso e a altura de uma pessoa, depois calcule o IMC através de uma função chamada calcularImc, quando ela clicar no botão Calcular. Depois mostre o resultado em um paragrafo( tag p)
+
+07 Faça um programa para calcular o desconto de um produto, voce deve pedir o preço e a porcentagem de desconto, deposi mostre na tela o valor descontado e o preco com o desconto aplicado.
+
+
+'--------------------------------------------------------------------
+'Função no javaScript
+'--------------------------------------------------------------------
+Por convenção do javaScript, normalmente as funções que lidam com eventos da tela, tem o nome começado com handle.
