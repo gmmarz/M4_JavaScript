@@ -1,0 +1,3 @@
+AUla 7 anotações
+
+-Dica todos os elementos do DOM  inicia-los no começo do script

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar a Cor!</title>
+</head>
+
+<body id="bodyId" >
+    <button onclick="changeColor('red')">Vermelho</button>
+    <button onclick="changeColor('green')">Verde</button>
+    <button onclick="changeColor('blue')">Azul</button>
+    <button id="reset" onclick="changeColor('white')">Resetar</button>
+
+    <script>
+        // Ex-2 implemente a função "changeColor", de forma que quando  botão é clicado o fundo da tela muda para a cor indicada no botão
+        //style="background-color: red;"
+        //Declarando os objetos do html
+        let bodyObj = document.getElementById("bodyId")
+
+        // declarando valores das cores
+        let red_color = "#FF0000"
+        let green_color = "#008000"
+        let blue_color = "#000FF"
+
+        function changeColor(color){
+
+            console.log("Funcao changeColor")
+            console.log(`Valor da cor enviada:${color} `)
+
+            document.body.style.backgroundColor = color;
+            /*
+            switch(color){
+                case 'red':
+                    document.body.style.backgroundColor = "red";
+                    break;
+                case 'green':
+                    document.body.style.backgroundColor = "green";
+                    break;
+                case 'blue':
+                    document.body.style.backgroundColor = "blue";
+                    break;
+                default:
+                    document.body.style.backgroundColor = "white";
+                    break;
+            }
+
+           /* if (color == 'red'){
+                document.body.style.backgroundColor = "red";
+            }
+            else{
+                document.body.style.backgroundColor = "white";
+            }*/
+        }
+
+    </script>
+</body>
+
+</html>
