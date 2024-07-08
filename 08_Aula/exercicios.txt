@@ -1,0 +1,5 @@
+ex01.faça uma página onde você irá resetar uma senha
+-sua pagina deverá ter dois "<inputs type "password" >"
+-quando o usuário clicar em um boatão salvar você deverá verificar se as senhas são iguais
+ -se as senhas forem iguais , mostrem em um paragráfo o texto "Senha salva com sucesso"
+ -se não mostre o texto "As senhas devem ser iguais"

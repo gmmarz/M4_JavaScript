@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funções</h1>
+    <div>
+        <label for="texto">texto</label>
+        <input type="text" name="texto" id="texto" value="123">
+    </div>
+    <button onclick="handleClick()"> Enviar </button>
+    <p id="resultado"></p>
+    
+
+
+
+    <script>
+        // função convencional
+        function buscarValor(inputId){
+            const input = document.getElementById(inputId)
+            return input.value
+
+        }
+
+        //A principal duferença entre as funções 
+        //abaixo e a função convencional é que na função convencional você é obrigado
+        //a nomear a função.
+        // Função Anônima
+        const mostrarValor = function (valor) {
+            const paragrafo = document.getElementById('resultado')
+
+            //Atribuindo o conteudo de uma tag
+            //Atribuindo somente o conteúdo de texto 
+            //paragrafo.innerText = valor
+            //paragrafo.textContent = valor
+
+            //Interpreta Tag HTML que estiverem no texto
+            paragrafo.innerHTML = valor
+        }
+
+        //Funções de setas (Arrow Function)
+        const handleClick = () => {
+            const valor = buscarValor('texto')
+            mostrarValor(valor)
+
+        }
+
+    </script>
+</body>
+</html>

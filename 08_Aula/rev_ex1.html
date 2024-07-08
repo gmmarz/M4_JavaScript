@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetar senha</title>
+</head>
+<body>
+    <h1>Resetar sua senha</h1>
+    
+    <div>
+        <label for="pass1">Senha: </label>
+        <input type="password" name="pass1" id="pass1">
+        <label for="pass2">Confirme sua senha:  </label>
+        <input type="password" name="pass2" id="pass2">
+    </div>
+    <button onclick="handleClick()">Salvar</button>
+    <p id="resultado"></p>
+
+    <script>
+
+        function pegarInput(idInput){
+            const inElement = document.getElementById(idInput)
+            return inElement.value
+        }
+
+        function validarSenha(lstSenha){
+                        
+            if(lstSenha[0].length < 4 || lstSenha[1].length< 4)
+            {
+                return false
+                
+            }
+            else if (lstSenha[0]==lstSenha[1]) {
+                return true
+                
+            }
+            else{
+                return false
+            }
+
+        }
+
+        function mostrarResultado(resultado){
+            const resultElemento = document.getElementById('resultado')
+            
+            if (resultado){
+                resultado = "Senha salva com sucesso"
+                resultElemento.style.color = "green"
+            }
+            else
+            {
+                resultado =  "As senhas devem ser iguais e terem pelo menos 4 caracteres"
+                resultElemento.style.color = "red"
+            }
+
+            resultElemento.textContent = resultado
+        }
+
+        function handleClick(){
+            let passwords = [] 
+            passwords[0] = pegarInput('pass1')
+            passwords[1] = pegarInput('pass2')
+
+            resultado = validarSenha(passwords)
+            mostrarResultado(resultado)
+        }
+
+
+
+    </script>
+</body>
+</html>
