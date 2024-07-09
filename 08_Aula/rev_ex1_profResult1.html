@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetar senha</title>
+</head>
+<body>
+    <h1>Digite a nova senha</h1>
+    
+    <div>
+        <label for="senha">Nova senha: </label> <br>
+        <input type="password" name="senha" id="senha">
+
+    </div>
+
+    <div>
+        <label for="confirmar_senha">Confirme sua senha:  </label><br>
+        <input type="password" name="confirmar_senha" id="confirmar_senha">
+    </div>
+    <button onclick="handleClick()">Salvar</button>
+    <p id="mensagem"></p>
+
+    <script>
+
+
+
+        function handleClick(){
+            const senha = document.getElementById('senha').value
+            const confirmar_senha = document.getElementById('confirmar_senha').value
+            const pMessagem = document.getElementById('mensagem')
+            
+            //console.log(pMessagem.style)
+            //Uma pratica é verificar as condições q não queremos e dar um return para sair da função deixando a condição que queremos por ultimo.
+            //exemplo
+
+            //Tecnica chamada de guard if
+            if(senha.lenght <4 || confirmar_senha.lenght < 4){
+                pMessagem.style.color = 'red'
+                pMessagem.style.fontWeight = 'bold'
+                pMessagem.textContent = 'Senhas devem ter pelo menos 4 caracteres'
+                return
+            }
+
+            if(senha != confirmar_senha){
+                pMessagem.style.color = 'red'
+                pMessagem.style.fontWeight = 'bold'
+                pMessagem.textContent = 'Senhas devem ser iguais'
+                return
+
+            }
+            pMessagem.style.color = 'green'
+            pMessagem.style.fontWeight = 'bold'
+            pMessagem.textContent = 'Senha salva com sucesso.'
+
+        }
+
+
+
+    </script>
+</body>
+</html>

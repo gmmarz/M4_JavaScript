@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <h1>Eventos Dom</h1>
+        <div id = "box" class="default"></div>
+        <button id="reset">Reset</button>
+
+    
+    </main>
+    
+    <script>
+        // pegando pela classe
+        //const box = document.querySelector('.default')
+        //pegando pelo id
+        const box = document.getElementById("box")
+
+        function handlerClick(){
+            box.style.backgroundColor = "cyan"
+            box.innerText = "Clicou!"
+        }
+
+        function handleMouseEnter(){
+            box.className = 'mouseon'
+            box.innerText = "Mouse entrou na caixa"
+        }
+
+        //box.addEventListener
+        box.addEventListener('mouseenter', handleMouseEnter)
+    </script>
+</body>
+</html>
