@@ -62,6 +62,7 @@
     <script>
         const boxArray = document.querySelectorAll('.box')
 
+        //Quando utilizando o arrow function e em uma linha apenas, não precisa utilizar as chaves.
         boxArray[0].addEventListener("dblclick",()=> boxArray[0].classList.add('purple'))
         boxArray[0].addEventListener("mouseout",()=>boxArray[0].classList.remove('purple'))
 
@@ -70,6 +71,7 @@
 
         boxArray[2].addEventListener('click',()=>boxArray[2].classList.add('gray'))
         boxArray[2].addEventListener('dblclick',()=>boxArray[2].classList.remove('gray'))
+
 
 
     </script>
