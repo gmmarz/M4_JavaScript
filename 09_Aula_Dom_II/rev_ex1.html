@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Revisao-ex1 </title>
+    <style>
+        body {
+            height: 100vh;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .purple{
+            background-color: purple;
+        }
+
+        .gray{
+            background-color: gray;
+        }
+
+        .black{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Caixas </h1>
+    <div id="box-list">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+    </div>
+
+    <script>
+        const boxArray = document.querySelectorAll('.box')
+
+        boxArray[0].addEventListener("dblclick",()=> boxArray[0].classList.add('purple'))
+        boxArray[0].addEventListener("mouseout",()=>boxArray[0].classList.remove('purple'))
+
+        boxArray[1].addEventListener("mouseenter",()=>boxArray[1].classList.add('black'))
+        boxArray[1].addEventListener("click",()=>boxArray[1].classList.remove('black'))
+
+        boxArray[2].addEventListener('click',()=>boxArray[2].classList.add('gray'))
+        boxArray[2].addEventListener('dblclick',()=>boxArray[2].classList.remove('gray'))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Revisao </title>
+    <style>
+        body {
+            height: 100vh;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1> Caixas </h1>
+    <div id="box-list">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+    </div>
+
+    <script>
+        // Toda interação do javascript com o HTML parte atráves do "document"
+        const boxList = document.getElementById('box-list')
+        const oneBox = document.querySelector('.box') //pega a primeira ocorrência da classe .box
+        const boxArray = document.querySelectorAll('.box')
+        console.log(boxArray)
+
+        //Add Event listener
+        //é uma função que vc indica qual elemente será adicionado um evento lister. Um marcador que irá monitorar o evento do elemento
+        //primeiro parametro é o evento
+        //segundo parametro é o callback
+        //exemplo da função
+        function minhaFuncao(){
+            alert("Clicou")
+        }
+        //eventos
+        //click
+        //mouseenter
+        //mouseout
+        //dblclick duplo clique
+        //boxArray[0].addEventListener("click",minhaFuncao)
+      /*  boxArray[0].addEventListener("click",minhaFuncao)
+
+        //callback
+        boxArray[1].addEventListener("mouseenter",()=>{alert("mouse entrou.")})
+        boxArray[1].addEventListener("mouseenter")*/
+
+        //Colocando um evento em todos os elementos box
+        for(let box of boxArray){
+            box.addEventListener("dblclick",minhaFuncao)
+        }
+
+        //para mudar a cor , vocÊ pode mudar a propriedade "class" como um todo, ou utilizar o classList para isso
+        boxArray[0].classList.add('green') //adiciona classe
+        boxArray[0].classList.remove('green') // remove classe
+
+    </script>
+</body>
+</html>

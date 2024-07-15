@@ -1,0 +1,20 @@
+---------------------------
+-AULA09
+---------------------------
+
+dontpad - infinitybh1507
+
+No HTML se a classe está separada pelo espaço significa qque a tag possui duas classes
+
+ <div class="box red"></div>
+
+ para adicionar o script em um arquivo separado 
+ <script>:src no vc code
+
+ eventos dom:
+
+ https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+ //Anotações do dontpad
+ 
