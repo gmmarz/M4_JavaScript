@@ -24,6 +24,7 @@
             width: 200px;
             height: 200px;
             border: 1px solid black;
+            transition: 0.8s;
         }
         .red {
             background-color: red;
@@ -63,8 +64,14 @@
         const boxArray = document.querySelectorAll('.box')
 
         //Quando utilizando o arrow function e em uma linha apenas, não precisa utilizar as chaves.
-        boxArray[0].addEventListener("dblclick",()=> boxArray[0].classList.add('purple'))
-        boxArray[0].addEventListener("mouseout",()=>boxArray[0].classList.remove('purple'))
+        //funcao de callback é uma funcap que é passada como parametro de um evento que será executada posteriormente quando o evento
+        //for executado.
+
+        //boxArray[0].addEventListener("dblclick",()=> boxArray[0].classList.add('purple'))
+        //boxArray[0].addEventListener("mouseout",()=>boxArray[0].classList.remove('purple'))
+        boxArray[0].addEventListener("dblclick",()=>boxArray[0].classList.replace('red','purple'))
+        boxArray[0].addEventListener("mouseout",()=>boxArray[0].classList.replace('purple','red'))
+
 
         boxArray[1].addEventListener("mouseenter",()=>boxArray[1].classList.add('black'))
         boxArray[1].addEventListener("click",()=>boxArray[1].classList.remove('black'))

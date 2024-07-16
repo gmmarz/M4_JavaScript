@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio</title>
+    <style>
+        #pessoas{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .pessoa{
+            border: 1px dashed black;
+            border-radius:4px ;
+            padding: 8px;
+            background-color: #fafafa;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        }
+
+        .sorteada{
+            border: 1px dashed limegreen;
+
+
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Sorteio</h1>
+    <form id="form-sorteio">
+      <div>
+        <label for="nome"> Nome </label> <br>
+        <input type="text" name="nome" id="nome" />
+      </div>
+      <div>
+        <label for="idade"> Idade </label> <br>
+        <input type="number" name="idade" id="idade" />
+      </div>
+      <br>
+      <button type="submit"> Adicionar </button>
+      <button type="button"> Sortear </button>
+    </form>
+    <hr /> <!--é uma linha de divisao-->
+    <h2>Participantes</h2>
+    <ul id="pessoas">
+        <li class="pessoa">
+            lidia - 20 Anos
+        </li>
+        <li class="pessoa sorteada">
+            Marcola - 39 anos
+        </li>
+    </ul>
+
+    <script>
+        /* Vantagem de utilizar formulários é a possibilidades de pegar todos os inputs de uma vez apenas
+           outra vantagem é que o formulario já tem os checks proprios das variáveis
+           O formulário possuí um evento chamado submit.
+        */
+        const formulario = document.getElementById('form-sorteio')
+
+        //Por padrão toda função que lida com um evento tem o nome começado com handle
+        //o primeiro parametro passado para uma função de callback é as caracteristica do evento
+        function handleSubmit(e){
+            /*
+                o prevent defaul impedde que o comportamento padrão do evento aconteça.
+            */
+            e.preventDefault()
+            //alert('Enviei o formulario')
+            //formulario permit acessar os elementos dele utilizando o parametro name.
+            //podemos acessar i input do formulario 
+            //passando o "name" ou o "id" do input como propriedade
+            let nome = formulario.nome.value
+            let idade = formulario.idade.value
+
+            const listaPessoas = document.getElementById('pessoas')
+            listaPessoas.innerHTML = `<li >      </li>`
+
+        }
+
+        formulario.addEventListener('submit',handleSubmit)
+
+    </script>
+  </body>
+</html>
