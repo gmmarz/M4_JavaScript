@@ -29,6 +29,7 @@
     </ul>
 
     <script>
+        //--Adicionando ao sorteio
         // O disparo do formulário vai ser determinado 
         // pelo evento de SUBMIT
         const formulario = document.getElementById('form-sorteio')
@@ -66,6 +67,39 @@
         }
 
         formulario.addEventListener('submit', handleAdicionarPessoa)
+
+        //-------------------------Adicionando ao sorteiro---------
+
+        function sortearNumero(minimo,maximo){
+            return numeroAleatorio = Math.floor((Math.random() * (maximo - minimo)) + minimo)
+        }
+
+        const botaoSortear = document.getElementById('executar-sorteio')
+
+        function handleSortear(){
+            const pessoas = document.querySelectorAll('.pessoa')
+
+            for(let pessoa of pessoas){
+                pessoa.classList.remove('sorteada')
+            }
+
+            const indexSorteado = sortearNumero(0,pessoas.length)
+
+            pessoas[indexSorteado].classList.add('sorteada')
+        }
+
+        botaoSortear.addEventListener('click',handleSortear)
+
+        //-----------Limpar a lista
+        const botaoLimpar = document.getElementById('limpar-sorteio')
+
+        function handlerLimparSorteio(){
+            let ulPessoas = document.getElementById('pessoas')
+            ulPessoas.textContent = ''
+        }
+
+        botaoLimpar.addEventListener('click',handlerLimparSorteio)
+
     </script>
   </body>
 </html>

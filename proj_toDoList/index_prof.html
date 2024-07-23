@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
-</head>
-<body>
-    <h1>Gerenciador de tarefas</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <style>
+      .tarefa {
+        display: flex;
+        justify-content: space-between;
+
+        padding-inline: 32px;
+        border: 1px solid black;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gerenciador de Tarefas</h1>
     <form id="form-tarefa" autocomplete="off">
-        <div>
-            <label for="tarefa">Tarefa: </label>
-            <input type="text" name="tarefa" id="tarefa">
-        </div>
-        <div>
-            <label for="descricao">Descrição: </label>
-            <input type="text" name="descricao" id="descricao">
-        </div>
-        <button type="submit">Adicionar</button>
+      <div>
+        <label for="tarefa"> Tarefa: </label>
+        <input type="text" name="tarefa" id="tarefa" />
+      </div>
+      <div>
+        <label for="descricao"> Descricao: </label>
+        <input type="text" name="descricao" id="descricao" />
+      </div>
+      <button type="submit">Adicionar</button>
     </form>
 
-    <hr>
+    <hr />
+
     <h2>Tarefas</h2>
     <ul id="tarefas">
-        <li>Estudar AWS - Realizar curso do mauro tanana -> <input type="checkbox"></li>
+      <li class="tarefa">
+        <div>
+          <p>Estudar AWS</p>
+          <p>Realizar curso do mauro tanana</p>
+        </div>
+        <input type="checkbox" />
+      </li>
     </ul>
 
     <script>
-        const formulario= document.getElementById('form-tarefa')
+      const formulario = document.getElementById("form-tarefa");
 
-        function handleAdicionarTarefa(event){
-            event.preventDefault()
+      function criarLiTarefa(tarefa, descricao) {
+        // Construindo LI
+        const liTarefa = document.createElement("li");
+        // liTarefa.textContent = `${tarefa} - ${descricao} -> `
 
-            //Capturando o formulario
-            let tarefa = formulario.tarefa.value
-            let descricao = formulario.descricao.value
+        const pTarefa = document.createElement("p");
+        pTarefa.textContent = tarefa;
 
-            //Construindo o lI
-            const liTarefa = document.createElement('li')
-            liTarefa.textContent = `${tarefa} - ${descricao} -> `
-            
-            const checkboxTarefa = document.createElement('input')
-            checkboxTarefa.type = 'checkbox'
+        const pDescricao = document.createElement("p");
+        pDescricao.textContent = descricao;
 
-            liTarefa.appendChild(checkboxTarefa)
+        const divInfo = document.createElement("div");
+        divInfo.appendChild(pTarefa);
+        divInfo.appendChild(pDescricao);
 
-            //Adicionando a lista
-            const ulTarefas = document.getElementById('tarefas')
-            ulTarefas.appendChild(liTarefa)
+        const checkboxTarefa = document.createElement("input");
+        checkboxTarefa.type = "checkbox";
 
+        liTarefa.appendChild(divInfo);
+        liTarefa.appendChild(checkboxTarefa);
+        liTarefa.classList.add("tarefa");
 
-        }
+        return liTarefa;
+      }
 
-        formulario.addEventListener('submit', handleAdicionarTarefa)
+      function handleAdicionarTarefa(event) {
+        event.preventDefault();
 
+        // Capturando do Formulaŕio
+        let tarefa = formulario.tarefa.value;
+        let descricao = formulario.descricao.value;
+
+        const liTarefa = criarLiTarefa(tarefa, descricao);
+
+        // Adicionando a Lista
+        const ulTarefas = document.getElementById("tarefas");
+        ulTarefas.appendChild(liTarefa);
+      }
+
+      formulario.addEventListener("submit", handleAdicionarTarefa);
     </script>
-    
-</body>
+  </body>
 </html>
