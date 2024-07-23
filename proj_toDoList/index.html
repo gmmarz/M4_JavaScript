@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+  </head>
+  <body>
+    <h1>My To Do</h1>
+    <form id="form-toDo">
+      <div>
+        <label for="nome"> Tarefa </label> <br>
+        <input type="text" name="nome" id="nome" required/>
+      </div>
+      <div>
+        <label for="">Descrição </label> <br>
+        <input type="text" name="descricao" id="descricao">
+      </div>
+      <button type="submit"> Adicionar </button>
+    </form>
+    <br>
+    <div>
+        <button id="limpar-tarefas">Limpar Sorteio</button>
+
+    </div>
+    <hr />
+    <h2> Tarefas </h2>
+    <ul id="tarefas">
+        <li class="tarefa"> Tarefa 1 aberta</li>
+        <li class="tarefa concluida"> Tarefa 2 concluida</li>
+
+    </ul>
+
+    <script>
+        // O disparo do formulário vai ser determinado 
+        // pelo evento de SUBMIT
+        const formulario = document.getElementById('form-toDo')
+
+        //Adicionar Tarefa na lista
+        //Capturar a lista
+        const ulTarefas = document.getElementById('tarefas')
+
+        function handleConcluirTarefa(chckBox){
+
+            console.log('Funcao concluir tarefa')
+            console.log(chckBox)
+
+        }
+
+        // Toda função de "handle" que lida com eventos
+        // pode receber as informações do proprio evento como
+        // 1º parametro
+        function handleAdicionarTarefa(event) {
+            // O privent default impede que o comportamento 
+            // padrão do evento aconteça
+            event.preventDefault()
+            console.log('Criando tarefa')
+            
+            // Podemos acessar o input do formulário
+            // passando o "name" ou "id" do input como propridedade
+            // do formulário
+            let nome = formulario.nome.value
+            let descricao = formulario.descricao.value
+            
+            
+
+            //Criar o LI
+            let liTarefa = document.createElement('li')
+            //liPessoa.className = 'pessoa'
+            liTarefa.classList.add('tarefa')
+            
+            let pTarefa = document.createElement('p')
+            pTarefa.innerText = nome
+
+            //Criando elementos da tarefa
+            let pDescricao = document.createElement('p')
+            pDescricao.innerText = descricao
+
+            let chckBox = document.createElement('input')
+            chckBox.type = 'checkbox'
+            chckBox.addEventListener('click',handleConcluirTarefa(chckBox))
+            
+            //Adicionando elementos na tarefa
+            liTarefa.appendChild(pTarefa)
+            liTarefa.appendChild(pDescricao)
+            liTarefa.appendChild(chckBox)
+
+            //Adicionar o LI na lista
+            ulTarefas.appendChild(liTarefa)
+
+            
+        }
+        
+        formulario.addEventListener('submit', handleAdicionarTarefa)
+        
+        
+
+    </script>
+  </body>
+</html>

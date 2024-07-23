@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <h1>Gerenciador de tarefas</h1>
+    <form id="form-tarefa" autocomplete="off">
+        <div>
+            <label for="tarefa">Tarefa: </label>
+            <input type="text" name="tarefa" id="tarefa">
+        </div>
+        <div>
+            <label for="descricao">Descrição: </label>
+            <input type="text" name="descricao" id="descricao">
+        </div>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <hr>
+    <h2>Tarefas</h2>
+    <ul id="tarefas">
+        <li>Estudar AWS - Realizar curso do mauro tanana -> <input type="checkbox"></li>
+    </ul>
+
+    <script>
+        const formulario= document.getElementById('form-tarefa')
+
+        function handleAdicionarTarefa(event){
+            event.preventDefault()
+
+            //Capturando o formulario
+            let tarefa = formulario.tarefa.value
+            let descricao = formulario.descricao.value
+
+            //Construindo o lI
+            const liTarefa = document.createElement('li')
+            liTarefa.textContent = `${tarefa} - ${descricao} -> `
+            
+            const checkboxTarefa = document.createElement('input')
+            checkboxTarefa.type = 'checkbox'
+
+            liTarefa.appendChild(checkboxTarefa)
+
+            //Adicionando a lista
+            const ulTarefas = document.getElementById('tarefas')
+            ulTarefas.appendChild(liTarefa)
+
+
+        }
+
+        formulario.addEventListener('submit', handleAdicionarTarefa)
+
+    </script>
+    
+</body>
+</html>

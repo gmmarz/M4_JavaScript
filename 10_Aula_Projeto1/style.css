@@ -1,0 +1,27 @@
+/*Reset de CSS*/
+*{
+    padding: 0;
+    list-style: none;
+}
+
+
+#pessoas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pessoa {
+    transition: 0.3s;
+    border: 1px dashed black;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #FAFAFA;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pessoa.sorteada {
+    font-weight: 700;
+    border: 1px dashed limegreen;
+    box-shadow: 1px 1px 10px rgba(0, 131, 9, 0.505);
+}

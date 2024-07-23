@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+    <h1>Sorteio</h1>
+    <form id="form-sorteio">
+      <div>
+        <label for="nome"> Nome </label> <br>
+        <input type="text" name="nome" id="nome" required/>
+      </div>
+      <button type="submit"> Adicionar </button>
+    </form>
+    <br>
+    <div>
+        <button id="limpar-sorteio">Limpar Sorteio</button>
+        <button id="executar-sorteio"> Sortear </button>
+
+    </div>
+    <hr />
+    <h2> Participantes </h2>
+    <ul id="pessoas">
+
+    </ul>
+
+    <script>
+        // O disparo do formulário vai ser determinado 
+        // pelo evento de SUBMIT
+        const formulario = document.getElementById('form-sorteio')
+
+        // Toda função de "handle" que lida com eventos
+        // pode receber as informações do proprio evento como
+        // 1º parametro
+        function handleAdicionarPessoa(event) {
+            // O privent default impede que o comportamento 
+            // padrão do evento aconteça
+            event.preventDefault()
+            
+            // Podemos acessar o input do formulário
+            // passando o "name" ou "id" do input como propridedade
+            // do formulário
+            let nome = formulario.nome.value
+            
+            //Adicionar Pessoa no lista
+            //Capturar a lista
+            const ulPessoas = document.getElementById('pessoas')
+
+            //Criar o LI
+            let liPessoa = document.createElement('li')
+            //liPessoa.className = 'pessoa'
+            liPessoa.classList.add('pessoa')
+            liPessoa.textContent = nome
+
+            //Adicionar o LI na lista
+            ulPessoas.appendChild(liPessoa)
+
+            // Criando check box
+            let chkBox = document.createElement('input')
+            chkBox.type = 'checkBox'
+            
+        }
+
+        formulario.addEventListener('submit', handleAdicionarPessoa)
+    </script>
+  </body>
+</html>
