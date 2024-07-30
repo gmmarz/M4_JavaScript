@@ -1,0 +1,9 @@
+AUla 11 -
+
+Diga para projetos em html
+
+Criar uma estrutura com as elementos que nem gostáriamos que aparecem, para depois opder aplicar a estilização e a lógica em javascript
+
+
+Dica : ALGO que faz a página ficar pesada é a grande manipulação do DOM. 
+-Para melhorar o desempenho fazemos no java script variáveis para manter os valores do que queremos que aparece em tela. 
