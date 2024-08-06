@@ -1,0 +1,5 @@
+Aula 12 - dont pad
+infinitybh0508
+
+Site para pegar exemplos de icones: 
+https://ionic.io/ionicons
