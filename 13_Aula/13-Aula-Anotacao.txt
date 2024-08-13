@@ -6,3 +6,5 @@ https://ionic.io/ionicons
 
 Site para animações
 medium 
+
+SPA - Single page application - Pesquisar mais sobre! 
