@@ -1,0 +1,19 @@
+/*caso desejar sobrescrever uma classe do bootstrap*/
+header ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+ion-icon {
+    font-size: 24px;
+}
+
+header ion-icon {
+    color: white;
+    font-size: 40px;
+}
+
+#dados-cliente ion-icon {
+    font-size: 20px;
+}
+
