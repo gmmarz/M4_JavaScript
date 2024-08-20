@@ -43,19 +43,10 @@ function LinhaCliente(cliente){
 
 //logica da aplicação
 //Estado dos clientes (sempre que esse cara mudar a gente redenriza novamente)
-const clientesState = [
-    {
-        id: 1,
-        nome: 'Marco Aurélio',
-        email: 'marco@email.com',
-        endereco: 'Pampulha, Belo Horizonte - MG'
-    },
-    {
-        id: 2,
-        nome: 'Tainá',
-        email: 'ainaprogramadora@outlook.com',
-        endereco: 'Padre Eustaquio, Belo Horizonte - MG'
-    }
+const apiURL = "https://clienteapi.onrender.com"
+
+let clientesState = [
+
 ]
 
 //Listagem de clientes
@@ -77,7 +68,16 @@ function listarClientes(clientes) {
 }
 
 function handleListarClientes() {
-    listarClientes(clientesState)
+    // o fetch faz uma requisicao(por padrao GET)
+    // para a URL especificada
+    fetch(`${apiURL}/clientes`)
+        .then(response => response.json())
+        .then(dados => {
+            clientesState = dados;
+            listarClientes(clientesState);
+        })
+
+    
 }
 
 window.addEventListener("DOMContentLoaded", handleListarClientes)
@@ -121,6 +121,10 @@ function handleCadastrarCliente(event) {
     console.log('Formulário enviado')
     clientesState.push(novoClient)
     listarClientes(clientesState)
+
+    let modal = document.getElementById('modal-cliente');
+    modal = bootstrap.Modal.getInstance(modal)
+    modal.hide();
 
 }
 
