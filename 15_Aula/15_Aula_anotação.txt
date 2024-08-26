@@ -1,0 +1,34 @@
+AULA15 - Continuação do projeto de cadastro clientes.
+continuação da aula 14, 13,
+
+dont pad - infinitybh2608
+
+
+-Para trabalhar com multiplos arquivos javascrit é necessário colocar o parametro 
+type = "module" na tag script.
+
+
+Arquitura muito conhecida e a mais utilizada hoje em dia
+MVC - padrão de design usando para desacoplar a interface do usuário
+
+Pesquisar na internet.
+vanilla js mvc pattern example.
+
+Canal do youtube de recomendação
+Felipe dechamps.
+
+-playlist - primeiro jogo multiplayer
+
+site para desenho - ttdraw
+
+
+Sobre a API utilizada na sala de aula
+
+Sejam bem vindos a aula 15 de javascript
+
+Repositorio Projeto: https://github.com/Davi-Classes/ClienteGestao
+Repositório API: https://github.com/Davi-Classes/ClienteApi
+Documentação API: https://clienteapi.onrender.com/docs
+
+
+API - application program interface.
