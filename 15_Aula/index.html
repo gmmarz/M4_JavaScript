@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
+    <!-- Header com background dark -->
     <header class="bg-dark">
       <div
-        class="container p-4 d-flex justify-content-between align-content-center"
+        class="container p-4 d-flex justify-content-between align-items-center"
       >
         <h1 class="text-white">Meus Clientes</h1>
         <ion-icon name="person"></ion-icon>
@@ -26,9 +27,13 @@
 
     <main>
       <div class="container p-4">
-
+        <!-- 
+          Parte de Cima da Tabela 
+          - Modal de adicionar cliente 
+          - Barra de pesquisar
+        -->
         <div class="d-flex justify-content-between align-items-center">
-            <!--Botão de cadastrar-->
+          <!-- Botão de Cadastrar Cliente -->
           <button
             data-bs-toggle="modal"
             data-bs-target="#modal-cliente"
@@ -38,8 +43,7 @@
             <ion-icon name="create"></ion-icon>
           </button>
 
-          <!-- Modal -->
-           <!--Com formulário de cadastro.-->
+          <!-- Modal com o formulário de cadastro -->
           <div
             class="modal fade"
             id="modal-cliente"
@@ -48,8 +52,9 @@
             aria-hidden="true"
           >
             <div class="modal-dialog">
+              <!-- Caixa do Modal -->
               <form class="modal-content" id="form-cliente" autocomplete="off">
-                <!--Header do modal onde tem o botão de fechar-->
+                <!-- Titulo e Botão de Fechar -->
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="titulo-modal-cliente">
                     Cadastrar novo cliente
@@ -61,6 +66,7 @@
                     aria-label="Close"
                   ></button>
                 </div>
+                <!-- Campos do Formulário: Parte principal do modal -->
                 <div class="modal-body">
                   <div class="mb-3">
                     <label for="cliente" class="form-label"> Cliente </label>
@@ -91,7 +97,7 @@
                   </div>
                   <div id="error-message" class="text-danger"></div>
                 </div>
-                <!--Fim do modal - rodapé onde tem os botões-->
+                <!-- Botão para submeter o formulário e para fechar -->
                 <div class="modal-footer">
                   <button
                     type="button"
@@ -121,6 +127,7 @@
           </div>
         </div>
         <hr />
+        <!-- Tabela com os clientes cadastrados -->
         <table id="clientes" class="table table-striped">
           <thead>
             <tr>
@@ -131,24 +138,14 @@
               <th>Ações</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-
-              
-            </tr>
-          </tbody>
+          <!-- Aqui vão os dados da tabela -->
+          <tbody></tbody>
         </table>
       </div>
     </main>
 
     <!-- Scripts -->
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Biblioteca de icones-->
+    <!-- Biblioteca de Icones -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -157,6 +154,13 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Funcionalidade do Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script Proprio com Lógica da Aplicação -->
     <script type="module" src="./public/js/script.js"></script>
   </body>
 </html>

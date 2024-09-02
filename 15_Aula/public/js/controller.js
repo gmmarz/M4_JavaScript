@@ -1,39 +1,26 @@
+import {
+  buscarClientes,
+  cadastrarCliente,
+  editarCliente,
+  excluirCliente,
+} from "./model.js";
 import { listarClientes, mostrarError } from "./view.js";
 
-// Lógica da Aplicação
-// Estado dos Clientes (Sempre que esse cara mudar, a gente renderiza denovo)
-const apiUrl = "https://clienteapi.onrender.com";
 let clientesState = [];
 
+// Lógica da Aplicação
 // Listagem de Clientes
 async function handleListarClientes() {
   // O Fetch faz uma requisição (por padrão um GET)
   // para a URL especificada.
   // Await ele espera a promessa terminar, para continuar o codigo
-  const response = await fetch(`${apiUrl}/clientes`)
-  const dados = await response.json()
-  clientesState = dados
-  listarClientes(clientesState)
+  clientesState = await buscarClientes();
+  listarClientes(clientesState);
 }
 
 window.addEventListener("DOMContentLoaded", handleListarClientes);
 
 // Cadastro de Clientes
-async function cadastrarCliente(cliente) {
-  // Cadastrar o Cliente
-  const response = await fetch(`${apiUrl}/clientes`, {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(cliente)
-  })
-
-  if (!response.ok) {
-    throw new Error("Houve um erro ao comunicar com o servidor.")
-  }
-}
-
 const formCliente = document.getElementById("form-cliente");
 
 async function handleCadastrarCliente(event) {
@@ -43,7 +30,7 @@ async function handleCadastrarCliente(event) {
     nome: formCliente.cliente.value.trim(),
     email: formCliente.email.value.trim(),
     endereco: formCliente.endereco.value.trim(),
-  } ;
+  };
 
   try {
     if (novoCliente.nome == "") {
@@ -58,7 +45,7 @@ async function handleCadastrarCliente(event) {
       throw new Error("O campo endereço é obrigatório.");
     }
 
-    await cadastrarCliente(novoCliente)
+    await cadastrarCliente(novoCliente);
     mostrarError("");
   } catch (error) {
     mostrarError(error.message);
@@ -66,7 +53,7 @@ async function handleCadastrarCliente(event) {
   }
 
   // Listar Clientes
-  handleListarClientes()
+  handleListarClientes();
 
   // Fecha o modal do bootstrap
   let modal = document.getElementById("modal-cliente");
@@ -74,7 +61,16 @@ async function handleCadastrarCliente(event) {
   modal.hide();
 
   // Limpando o Formulário.
-  formCliente.reset()
+  formCliente.reset();
 }
 
 formCliente.addEventListener("submit", handleCadastrarCliente);
+
+export async function handleExcluirCliente(clienteId) {
+  let confirmarExclusao = confirm('Deseja excluir o cliente?')
+
+  if (confirmarExclusao) {
+    await excluirCliente(clienteId);
+    handleListarClientes();
+  }
+}
