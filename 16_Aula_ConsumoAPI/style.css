@@ -1,0 +1,88 @@
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-block: 1.6rem;
+}
+
+form {
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+#produtos {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 250px;
+    background-color: #FAFAFA;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.025);
+}
+
+.produto img {
+    width: 250px;
+    height: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.produto .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    flex: 1;
+}
+
+.produto .content h2 {
+    font-size: 16px;
+}
+
+.produto .footer {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.produto button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: rgb(240, 181, 31);
+    border-radius: 4px;
+    
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.produto button:hover {
+    cursor: pointer;
+    background-color: goldenrod;
+}
