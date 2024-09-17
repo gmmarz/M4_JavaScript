@@ -30,6 +30,7 @@ section {
     justify-content: space-evenly;
 
     padding-block: 2rem;
+    flex-wrap: wrap;
 }
 
 .filme {
