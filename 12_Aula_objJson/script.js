@@ -149,20 +149,20 @@ inputPesquisar.addEventListener("input", handlePesquisarTarefas);
 const formulario = document.getElementById("form-tarefa");
 
 function handleAdicionarTarefa(event) {
-event.preventDefault();
+  event.preventDefault();
 
-// Capturando do Formulaŕio
-let novaTarefa = {
-  id: criarId(tarefasState),
-  nome: formulario.tarefa.value,
-  descricao: formulario.descricao.value,
-  completa: false,
-};
+  // Capturando do Formulaŕio
+  let novaTarefa = {
+    id: criarId(tarefasState),
+    nome: formulario.tarefa.value,
+    descricao: formulario.descricao.value,
+    completa: false,
+  };
 
-tarefasState.push(novaTarefa);
-listarTarefas(tarefasState);
+  tarefasState.push(novaTarefa);
+  listarTarefas(tarefasState);
 
-formulario.reset()
+  formulario.reset()
 }
 
 formulario.addEventListener("submit", handleAdicionarTarefa);

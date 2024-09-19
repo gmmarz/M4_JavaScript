@@ -33,9 +33,9 @@ function Produto(produto) {
   const paragrafoPreco = document.createElement("p");
   // Formatar para uma moeda
   paragrafoPreco.textContent = produto.price.toLocaleString('pt-BR', {
-    style: "currency",
-    currency: "BRL",
-  });
+        style: "currency",
+        currency: "BRL",
+    });
 
   // 5. Envolver o h2 e o paragrafo em uma div com a classe "content" utilizando o appendChild
   const divContent = document.createElement("div");
